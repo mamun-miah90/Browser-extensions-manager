@@ -61,7 +61,7 @@ const extensions = [
             if(confirmDelete)
             {
                 extensions.splice(index,1);
-                renderExtensions(document.querySelector(".filter-btn.active").CDATA_SECTION_NODE.filter);
+                renderExtensions(document.querySelector(".filter-btn.active").dataset.filter);
             }
             
         }
@@ -69,7 +69,6 @@ const extensions = [
   });
 
 
-  // -----------------------
   extensionsList.addEventListener("change", e => {
     if (e.target.classList.contains("toggle-btn")) {
       const id = parseInt(e.target.getAttribute("data-id"));
